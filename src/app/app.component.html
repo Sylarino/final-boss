@@ -1,0 +1,27 @@
+<header>
+  <div class="container">
+    <div class="menu-trigger" (click)="isOpen = !isOpen">
+      APP IA <i [ngClass]="isOpen ? 'gg-chevron-up' : 'gg-chevron-down'"></i>
+    </div>
+    <div class="menu" *ngIf="isOpen" [@dropDownMenu]>
+      <div class="menu-item">
+        <ul>
+          <li><a [routerLink]="['/home']">Inicio</a></li>
+          <li>
+            <a [routerLink]="['/registro']">Registrarse</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="main-content">
+  <router-outlet></router-outlet>  
+
+  <div class="clearfix"></div>
+</section>
+
+<footer>
+  Todos los derechos reservados ©
+</footer>

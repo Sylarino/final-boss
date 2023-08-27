@@ -1,0 +1,25 @@
+<div>
+    <h1 class="title-section">Noticias</h1>
+
+    <p class="description-section">
+        Últimas noticias sobre Inteligencia Artificial
+    </p>
+
+    <article class="article-content-item" *ngFor="let news of newsList">
+
+        <h2>{{news.title}}</h2>
+
+        <figure>
+            <img src="{{news.img}}" alt="Imagen de la noticia 1">
+            <figcaption>Imagen de la noticia 1</figcaption>
+        </figure>
+
+        <p>{{news.description}}</p>
+
+        <h3>Fecha de Publicación: 
+            <time>{{news.date}}</time>
+        </h3>
+
+    </article>
+
+</div>
