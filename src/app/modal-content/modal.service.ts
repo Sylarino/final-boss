@@ -1,20 +1,20 @@
 import { Injectable } from '@angular/core';
-
-declare var $: any; // Declara $ como una variable global para usar jQuery
+import { MatDialog } from '@angular/material/dialog';
+import { ModalContentComponent } from './modal-content.component';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ModalService {
+  constructor(public dialog: MatDialog) {}
 
-  constructor() {}
+  openModal(): void {
+    const dialogRef = this.dialog.open(ModalContentComponent, {
+      width: '400px', // Ancho del modal
+    });
 
-  openModal() {
-    $('#myModal').modal('show');
+    dialogRef.afterClosed().subscribe(() => {
+      console.log('El modal se cerró');
+    });
   }
-
-  closeModal() {
-    $('#myModal').modal('hide');
-  }
-
 }

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Injectable } from '@angular/core';
 import { ModalService } from '../modal-content/modal.service';
 
+declare var $: any; // Declara $ como una variable global para usar jQuery
+
 @Injectable({
   providedIn: 'root'
 })
@@ -10,20 +12,12 @@ import { ModalService } from '../modal-content/modal.service';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
-export class RegisterComponent implements OnInit{
+export class RegisterComponent {
 
   constructor(private modalService: ModalService) {}
 
-  ngOnInit(): void {
+  openModal(): void {
     this.modalService.openModal();
-  }
-
-  openModal() {
-    this.modalService.openModal();
-  }
-
-  closeModal() {
-    this.modalService.closeModal();
   }
 
 }

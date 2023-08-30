@@ -1,25 +1,31 @@
 <div>
-    <h1 class="title-section">Noticias</h1>
+    <div class="container mt-5 mb-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="https://img.freepik.com/vector-gratis/banner-aprendizaje-automatico-inteligencia-artificial_107791-611.jpg" class="img-fluid" alt="Imagen del sitio">
+            </div>
+            <div class="col-md-6">
+                <h2>Noticias sobre Inteligencia Artificial</h2>
+                <p>
+                    ¡Bienvenido a nuestro sitio de noticias sobre lo último en Inteligencia Artificial! Sumérgete en el fascinante mundo de la IA, donde encontrarás artículos, investigaciones y desarrollos más recientes que están transformando la forma en que vivimos, trabajamos y interactuamos con la tecnología. Explora avances innovadores, descubre aplicaciones emocionantes y mantente actualizado con las tendencias más vanguardistas en el campo de la Inteligencia Artificial. Nuestro sitio es tu fuente confiable para noticias frescas y análisis en profundidad sobre la IA, diseñado para mantenerte informado sobre los avances que están impulsando el futuro.
+                </p>
+            </div>
+        </div>
+    </div>
 
-    <p class="description-section">
-        Últimas noticias sobre Inteligencia Artificial
-    </p>
+    <div class="row">
+        <div class="col-sm-6" *ngFor="let news of newsList" style="max-width: 25rem;">
+            <div class="card" >
+                <img src="{{news.img}}" class="card-img-top" alt="Imagen del artículo" >
+                <div class="card-body">
+                    <h5 class="card-title">{{news.title}}</h5>
+                    <p class="card-text">{{news.description}}</p>
+                    <p class="card-text"><small class="text-muted">Fecha de Publicación: 
+                        <time>{{news.date}}</time></small></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <article class="article-content-item" *ngFor="let news of newsList">
-
-        <h2>{{news.title}}</h2>
-
-        <figure>
-            <img src="{{news.img}}" alt="Imagen de la noticia 1">
-            <figcaption>Imagen de la noticia 1</figcaption>
-        </figure>
-
-        <p>{{news.description}}</p>
-
-        <h3>Fecha de Publicación: 
-            <time>{{news.date}}</time>
-        </h3>
-
-    </article>
 
 </div>

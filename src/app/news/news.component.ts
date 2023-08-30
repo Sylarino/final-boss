@@ -22,6 +22,18 @@ export class NewsComponent {
       img: 'https://picsum.photos/200',
       date: '2021-09-01'
     });
+    this.newsList.push({
+      title: 'Noticia 3',
+      description: 'Lorem ipsum dol',
+      img: 'https://picsum.photos/200',
+      date: '2021-09-01'
+    });
+    this.newsList.push({
+      title: 'Noticia 3',
+      description: 'Lorem ipsum dol',
+      img: 'https://picsum.photos/200',
+      date: '2021-09-01'
+    });
   }
 
 }
